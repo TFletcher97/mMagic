@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "leveler",
+  "version": "${version}",
+
+  "name": "MagicMod",
+  "description": "Let there be Magic!",
+  "authors": [
+    "Tristan Fletcher"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/magic/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.tpf.magic.MagicMod"
+    ]
+  },
+  "mixins": [
+    "magic.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

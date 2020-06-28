@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "item",
+  "pattern": [
+    "#c#",
+    " f "
+  ],
+  "key": {
+    "c": {
+      "item": "magic:wand_core"
+    },
+    "#": {
+      "item": "minecraft:blaze_rod"
+    },
+    "f": {
+      "item": "magic:wand_focus"
+    }
+  },
+  "result": {
+    "item": "magic:wand"
+  }
+}

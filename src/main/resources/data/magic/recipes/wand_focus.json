@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "item",
+  "pattern": [
+    "c c",
+    " # ",
+    "c c"
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:gold_nugget"
+    },
+    "#": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "item": "magic:wand_focus"
+  }
+}

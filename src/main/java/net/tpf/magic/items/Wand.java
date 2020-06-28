@@ -14,8 +14,12 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
@@ -34,14 +38,13 @@ public class Wand extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient()) {
-            if (user.getOffHandStack().getItem().getClass() == new MagicBook(new Item.Settings().group(ItemGroup.MISC)).getClass()){
+            if (user.getOffHandStack().getItem().getClass() == MagicBook.class){
 
 
                 SmallFireballEntity fireBall = new SmallFireballEntity(world, user.getX(), user.getEyeY(), user.getZ(), (double) (-MathHelper.sin(user.getHeadYaw() * 0.017453292F)), (double) (-MathHelper.sin(user.pitch * 0.017453292F)), (double) (MathHelper.cos(user.getHeadYaw() * 0.017453292F)));
-                fireBall.setNoGravity(false);
 
                 world.spawnEntity(fireBall);
-
+                user.playSound(SoundEvents.ENTITY_BLAZE_SHOOT, SoundCategory.PLAYERS, 10, 1);
 
             }else if(hand == Hand.MAIN_HAND){
 

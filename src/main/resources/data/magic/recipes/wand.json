@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "group": "item",
   "pattern": [
-    "  #",
+    "  f",
     " c ",
-    "f  "
+    "#  "
   ],
   "key": {
     "c": {

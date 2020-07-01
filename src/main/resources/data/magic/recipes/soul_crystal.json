@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "item",
+  "pattern": [
+    "sps",
+    "plp",
+    "sps"
+  ],
+  "key": {
+    "p": {
+      "item": "minecraft:ender_pearl"
+    },
+    "s": {
+      "item": "magic:soul_crystal_shard"
+    },
+    "l": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "result": {
+    "item": "magic:soul_crystal"
+  }
+}

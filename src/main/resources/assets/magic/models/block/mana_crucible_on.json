@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "magic:block/mana_crucible",
+    "north": "magic:block/mana_crucible",
+    "south": "magic:block/mana_crucible",
+    "east": "magic:block/mana_crucible",
+    "west": "magic:block/mana_crucible",
+    "up": "magic:block/mana_crucible_top",
+    "down": "magic:block/mana_crucible_bottom"
+  }
+}

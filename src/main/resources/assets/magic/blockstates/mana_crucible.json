@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "activated=true": { "model": "magic:block/mana_crucible_on" },
+    "activated=false": { "model": "magic:block/mana_crucible" }
+  }
+}

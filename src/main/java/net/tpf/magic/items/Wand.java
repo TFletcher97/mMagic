@@ -28,7 +28,7 @@ public class Wand extends Item {
 
     private boolean canFire = false;
     private final int cost = 1;
-    private final float explosionPower = 1;
+    private final float explosionPower = 3;
 
 
     public Wand(Settings settings) {

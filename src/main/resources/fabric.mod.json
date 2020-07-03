@@ -22,9 +22,6 @@
       "net.tpf.magic.MagicMod"
     ]
   },
-  "mixins": [
-    "magic.mixins.json"
-  ],
 
   "depends": {
     "fabricloader": ">=0.7.4",

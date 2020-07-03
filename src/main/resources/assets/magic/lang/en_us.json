@@ -1,9 +1,12 @@
 {
   "itemGroup.magic.general": "mMagic",
-  "item.magic.magic_book": "Magic Book",
+  "item.magic.magic_book": "Grimoire",
   "item.magic.soul_crystal": "Soul Crystal",
   "item.magic.soul_crystal_shard": "Soul Crystal Shard",
-  "item.magic.wand": "Wand",
-  "item.magic.wand_core": "Wand Core",
-  "item.magic.wand_focus": "Wand Focus"
+  "item.magic.wand": "Scepter",
+  "item.magic.wand_core": "Scepter Core",
+  "item.magic.wand_focus": "Scepter Focus",
+
+  "block.magic.mana_crucible": "Mana Crucible",
+  "block.magic.mana_crystal": "Mana Crystal"
 }

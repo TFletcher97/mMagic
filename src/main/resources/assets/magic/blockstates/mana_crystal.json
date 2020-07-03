@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "magic:block/mana_crystal"},
+    "facing=east": {"model": "magic:block/mana_crystal", "y": 90},
+    "facing=south": {"model": "magic:block/mana_crystal", "y": 180},
+    "facing=west": {"model": "magic:block/mana_crystal", "y": 270}
+  }
+}

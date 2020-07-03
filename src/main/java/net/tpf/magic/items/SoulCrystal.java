@@ -3,15 +3,14 @@ package net.tpf.magic.items;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsageContext;
+import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 
 public class SoulCrystal extends Item{
     public SoulCrystal(Settings settings) {
         super(settings);
     }
-
-
-
 
     @Override
     public void onCraft(ItemStack stack, World world, PlayerEntity player) {

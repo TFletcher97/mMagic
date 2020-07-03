@@ -23,11 +23,12 @@ public class ManaCrystal extends HorizontalFacingBlock {
     public ManaCrystal(Settings settings) {
         super(settings);
         setDefaultState(this.getStateManager().getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
+
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(Properties.HORIZONTAL_FACING);
+        builder.add(Properties.HORIZONTAL_FACING, Properties.LIT);
     }
 
     @Override
@@ -47,19 +48,4 @@ public class ManaCrystal extends HorizontalFacingBlock {
         }
     }
 
-    public void onPlaced(World world, BlockPos pos) {
-        if (!world.getBlockState(pos.north()).isAir()){
-
-        }else if(!world.getBlockState(pos.south()).isAir()){
-            world.setBlockState(pos, this.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
-            System.out.println("I'm facing NORTH");
-        }else if(!world.getBlockState(pos.east()).isAir()){
-            world.setBlockState(pos, this.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.WEST));
-            System.out.println("I'm facing WEST");
-        }else if(!world.getBlockState(pos.west()).isAir()){
-            world.setBlockState(pos, this.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.EAST));
-            System.out.println("I'm facing EAST");
-        }
-
-    }
 }

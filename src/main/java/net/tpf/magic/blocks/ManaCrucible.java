@@ -56,4 +56,15 @@ public class ManaCrucible extends Block {
         super.appendProperties(builder);
         builder.add(ACTIVATED);
     }
+
+    @Override
+    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos fromPos, boolean notify) {
+        super.neighborUpdate(state, world, pos, block, fromPos, notify);
+        BlockPos blockDown = pos.down();
+        if (world.getBlockState(blockDown).isOf(Blocks.MAGMA_BLOCK)) {
+            world.setBlockState(pos, state.with(ACTIVATED, true));
+        } else {
+            world.setBlockState(pos, state.with(ACTIVATED, false));
+        }
+    }
 }

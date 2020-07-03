@@ -52,7 +52,7 @@ public class Wand extends Item {
                 spawnProjectile(world, user);
             }else{
                 if (user.getOffHandStack().getItem().getClass() != MagicBook.class){
-                    world.createExplosion(null, user.getX(), user.getY(), user.getZ(), explosionPower, Explosion.DestructionType.DESTROY);
+                    world.createExplosion(user, user.getX(), user.getY(), user.getZ(), explosionPower, Explosion.DestructionType.DESTROY);
                 }
             }
         }
@@ -61,6 +61,7 @@ public class Wand extends Item {
 
     public void spawnProjectile(World world, PlayerEntity user){
         SmallFireballEntity fireBall = new SmallFireballEntity(world, user.getX(), user.getEyeY(), user.getZ(), (double) (-MathHelper.sin(user.getHeadYaw() * 0.017453292F)), (double) (-MathHelper.sin(user.pitch * 0.017453292F)), (double) (MathHelper.cos(user.getHeadYaw() * 0.017453292F)));
+        fireBall.setOwner(user);
         world.spawnEntity(fireBall);
         user.playSound(SoundEvents.ENTITY_BLAZE_SHOOT, SoundCategory.PLAYERS, 10, 1);
     }

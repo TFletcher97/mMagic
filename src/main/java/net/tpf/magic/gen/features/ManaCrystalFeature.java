@@ -24,16 +24,27 @@ public class ManaCrystalFeature extends Feature<DefaultFeatureConfig> {
     @Override
     public boolean generate(ServerWorldAccess serverWorldAccess, StructureAccessor accessor, ChunkGenerator generator, Random random, BlockPos pos, DefaultFeatureConfig config) {
 
-        boolean isPlaced = false;
         if (serverWorldAccess.getBlockState(pos).isAir()) {
             if (!serverWorldAccess.getBlockState(pos.north()).isAir() && !serverWorldAccess.getBlockState(pos.north()).isOf(BlockHandler.MANA_CRYSTAL)){
-                serverWorldAccess.setBlockState(pos, BlockHandler.MANA_CRYSTAL.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH), 3);
+                serverWorldAccess.setBlockState(pos, BlockHandler.MANA_CRYSTAL.getDefaultState()
+                        .with(Properties.HORIZONTAL_FACING, Direction.NORTH)
+                                .with(Properties.LIT, true)
+                        , 3);
             }else if(!serverWorldAccess.getBlockState(pos.south()).isAir() && !serverWorldAccess.getBlockState(pos.south()).isOf(BlockHandler.MANA_CRYSTAL)){
-                serverWorldAccess.setBlockState(pos, BlockHandler.MANA_CRYSTAL.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.SOUTH), 3);
+                serverWorldAccess.setBlockState(pos, BlockHandler.MANA_CRYSTAL.getDefaultState()
+                        .with(Properties.HORIZONTAL_FACING, Direction.SOUTH)
+                                .with(Properties.LIT, true)
+                        , 3);
             }else if(!serverWorldAccess.getBlockState(pos.east()).isAir() && !serverWorldAccess.getBlockState(pos.east()).isOf(BlockHandler.MANA_CRYSTAL)){
-                serverWorldAccess.setBlockState(pos, BlockHandler.MANA_CRYSTAL.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.EAST), 3);
+                serverWorldAccess.setBlockState(pos, BlockHandler.MANA_CRYSTAL.getDefaultState()
+                        .with(Properties.HORIZONTAL_FACING, Direction.EAST)
+                                .with(Properties.LIT, true)
+                        , 3);
             }else if(!serverWorldAccess.getBlockState(pos.west()).isAir()&& !serverWorldAccess.getBlockState(pos.west()).isOf(BlockHandler.MANA_CRYSTAL)){
-                serverWorldAccess.setBlockState(pos, BlockHandler.MANA_CRYSTAL.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.WEST), 3);
+                serverWorldAccess.setBlockState(pos, BlockHandler.MANA_CRYSTAL.getDefaultState()
+                        .with(Properties.HORIZONTAL_FACING, Direction.WEST)
+                                .with(Properties.LIT, true)
+                        , 3);
             }
         }
         return true;

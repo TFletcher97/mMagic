@@ -17,4 +17,5 @@ Each Scepter usage will use one Mana stored in the Grimoire. In order to recharg
 Soul Crystals can currently be charged by using them on a Mana Crucible that is sitting on a Magma block. Soul crystal shards can either be smelted from Soul Sand, or mined from Mana Crystal formations in the overworld.
  
 
-
+## License
+In addition to the CC Licence included in root, please feel free to use/edit/distrubute this mod and its source as you see fit. I only ask that it be mentioned somewhere where the code base originated from. If you are feeling extrodinarily generous, send me an email at tpfletcher97@gmail.com letting me know of your usage. I only ask so that I can be aware of the reach this code has achieved, as a personal interest not a legal one.
